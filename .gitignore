@@ -56,4 +56,5 @@ docs/_build/
 target/
 
 overlayfs.tar
+.idea
 
