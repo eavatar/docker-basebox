@@ -39,6 +39,8 @@ RUN cp /usr/sbin/runsvdir-start usr/sbin/ &&\
     cp /usr/bin/runsvdir usr/bin/ &&\
     cp /usr/bin/runsv usr/bin/ &&\
     cp /usr/bin/chpst usr/bin/ &&\
+    cp /usr/bin/sv usr/bin/ &&\
+    cp /usr/bin/svlogd usr/bin/ &&\
     cp /usr/bin/pwgen usr/bin/ &&\
     cp /bin/bash bin/ &&\
     cp /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 lib/ &&\
