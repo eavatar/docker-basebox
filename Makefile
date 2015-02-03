@@ -1,6 +1,6 @@
-GROUP=eavatartech
+GROUP=eavatar
 NAME=basebox
-VERSION=0.1.3
+VERSION=0.1.4
 
 
 all: build tag

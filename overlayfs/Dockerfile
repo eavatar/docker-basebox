@@ -18,12 +18,13 @@ RUN cp /etc/nsswitch.conf etc/nsswitch.conf
 RUN echo root:x:0:0:root:/root:/bin/sh > etc/passwd
 RUN echo root:x:0: > etc/group
 
-# the user to run application
-RUN echo ava:x:102:106::/home/ava:/bin/bash >> etc/passwd &&\
-    echo ava:x:106: >> etc/group
+# the user in the builder for setting ownership.
+RUN echo ava:x:1000:1000::/home/ava:/bin/bash >> etc/passwd &&\
+    echo ava:x:1000: >> etc/group
 
-RUN echo ava:x:102:106::/home/ava:/bin/bash >> /etc/passwd &&\
-    echo ava:x:106: >> /etc/group
+# the user to run application
+RUN echo ava:x:1000:1000::/home/ava:/bin/bash >> /etc/passwd &&\
+    echo ava:x:1000: >> /etc/group
 
 RUN ln -s lib lib64
 RUN ln -s bin sbin
