@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t eavatar/basebox .
+
+test:
+  override:
+    - docker run -d --name basebox eavatar/basebox; sleep 10
+    - docker exec basebox ps -ef
+
