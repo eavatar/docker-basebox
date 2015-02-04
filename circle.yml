@@ -9,6 +9,5 @@ dependencies:
 
 test:
   override:
-    - docker run -d --name basebox eavatar/basebox; sleep 10
-    - docker exec basebox ps -ef
+    - docker run -d --name basebox eavatar/basebox; sleep 2
 
