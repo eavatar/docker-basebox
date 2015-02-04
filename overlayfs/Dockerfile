@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.1
+FROM eavatar/builder
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -q && apt-get install -qy busybox-static runit bash pwgen
