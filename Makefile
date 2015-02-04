@@ -12,7 +12,7 @@ build: Dockerfile overlayfs.tar
 overlayfs.tar:
 	cd overlayfs && docker build --rm -t $(NAME)-builder .
 	docker run --rm $(NAME)-builder cat /overlayfs.tar > overlayfs.tar
-	docker rmi $(NAME)-builder
+#	docker rmi $(NAME)-builder
 
 tag:
 	@if ! docker images $(GROUP)/$(NAME) | awk '{ print $$2 }' | grep -q -F $(VERSION); then echo "$(NAME) version $(VERSION) is not yet built. Please run 'make build'"; false; fi
