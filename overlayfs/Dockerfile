@@ -1,4 +1,4 @@
-FROM eavatar/builder
+FROM eavatar/builder:0.1.7
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -q && apt-get install -qy busybox-static runit bash pwgen
